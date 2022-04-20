@@ -1,3 +1,11 @@
-<app-drum-item></app-drum-item>
-<app-drum-item></app-drum-item>
-<app-drum-item></app-drum-item>
+<swiper [config]="config" #swiper (slideChange)="onSlideChange()">
+  <ng-template swiperSlide>
+    <app-drum-item [active]="swiperActiveIndex === 0"></app-drum-item>
+  </ng-template>
+  <ng-template swiperSlide>
+    <app-drum-item [active]="swiperActiveIndex === 1"></app-drum-item>
+  </ng-template>
+  <ng-template swiperSlide>
+    <app-drum-item [active]="swiperActiveIndex === 2"></app-drum-item>
+  </ng-template>
+</swiper>

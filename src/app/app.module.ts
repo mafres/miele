@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { SwiperModule } from 'swiper/angular';
+
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { TabsComponent } from './tabs/tabs.component';
@@ -19,7 +21,8 @@ import { HelpComponent } from './help/help.component';
     DrumItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
