@@ -1,0 +1,12 @@
+@import '../../../styles/config/all';
+
+:host {
+  display: block;
+}
+
+.drum-item {
+  background: $color-medium-grey;
+  border-radius: 50%;
+  height: 245px;
+  width: 245px;
+}
