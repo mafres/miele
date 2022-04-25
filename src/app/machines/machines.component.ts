@@ -1,18 +1,21 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 
 import SwiperCore, {Swiper, SwiperOptions} from 'swiper';
-import {SwiperComponent} from "swiper/angular";
+import {SwiperComponent} from 'swiper/angular';
+import {ProgramsEnum} from '../enums/programs.enum';
 
 @Component({
-  selector: 'app-drums',
-  templateUrl: './drums.component.html',
-  styleUrls: ['./drums.component.scss']
+  selector: 'app-machines',
+  templateUrl: './machines.html',
+  styleUrls: ['./machines.component.scss']
 })
-export class DrumsComponent implements OnInit {
+export class MachinesComponent implements OnInit {
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
 
   swiperActiveIndex: number = 0;
+
+  readonly programs = ProgramsEnum;
 
   config: SwiperOptions = {
     slidesPerView: 1.5,

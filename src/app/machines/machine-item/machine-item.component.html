@@ -1,7 +1,20 @@
-<div class="drum-item"
-     [ngClass]="{'drum-item--inactive': !active}">
-  <span>Icon</span>
-  <span>Left</span>
-  <span>Text</span>
-  <span>Est.</span>
+<div class="machine-item"
+     [ngClass]="{
+      'machine-item--inactive': !active,
+      'machine-item--automatic': program === programs.automatic,
+      'machine-item--special': program === programs.special,
+      'machine-item--eco': program === programs.eco
+     }">
+  <div class="machine-item__inner">
+    <span class="machine-item__icon">
+      <img [src]="icon" />
+    </span>
+    <span class="machine-item__name">{{name}}</span>
+  </div>
+  <div class="machine-item__background">
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 187 187">
+      <path d="M89.421 1.17c-21.56.373-47.038 11.282-64.09 29.904C8.277 49.698-.353 76.033 1.171 97.542 1.551 119.1 12.47 144.578 31.1 161.633c18.63 17.054 44.97 25.69 66.481 24.173 21.562-.375 47.038-11.284 64.091-29.907 17.055-18.622 25.683-44.956 24.156-66.465-.379-21.559-11.297-47.035-29.926-64.09C137.27 8.289 110.933-.347 89.422 1.17V1.17Z" fill="#151515" stroke="#000" stroke-width=".75"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M75.009 3.185c14.833 46.09-20.843 110.305-67.88 122.246a91.996 91.996 0 0 0 17.234 29.041c32.61-35.853 106.553-37.186 140.442-2.538a91.688 91.688 0 0 0 16.147-29.599c-47.441-10.238-85.453-73.126-72.307-119.722a91.462 91.462 0 0 0-33.636.572Zm17.895 77.416c6.328-.925 13.857 5.967 13.49 12.353.927 6.329-5.963 13.853-12.347 13.486-6.33.928-13.857-5.967-13.492-12.352-.926-6.329 5.963-13.851 12.348-13.486Z" fill="#1C1C1C"/>
+    </svg>
+  </div>
 </div>

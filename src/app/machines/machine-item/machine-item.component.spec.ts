@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DrumItemComponent } from './drum-item.component';
+import { MachineItemComponent } from './machine-item.component';
 
-describe('DrumItemComponent', () => {
-  let component: DrumItemComponent;
-  let fixture: ComponentFixture<DrumItemComponent>;
+describe('MachineItemComponent', () => {
+  let component: MachineItemComponent;
+  let fixture: ComponentFixture<MachineItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DrumItemComponent ]
+      declarations: [ MachineItemComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DrumItemComponent);
+    fixture = TestBed.createComponent(MachineItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

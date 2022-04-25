@@ -1,14 +1,26 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ProgramsEnum} from "../../enums/programs.enum";
 
 @Component({
-  selector: 'app-drum-item',
-  templateUrl: './drum-item.component.html',
-  styleUrls: ['./drum-item.component.scss']
+  selector: 'app-machine-item',
+  templateUrl: './machine-item.component.html',
+  styleUrls: ['./machine-item.component.scss']
 })
-export class DrumItemComponent implements OnInit {
+export class MachineItemComponent implements OnInit {
+
+  @Input()
+    icon: string | undefined;
+
+  @Input()
+    name: string | undefined;
+
+  @Input()
+    program: ProgramsEnum | undefined;
 
   @Input()
     active: boolean = false;
+
+  readonly programs = ProgramsEnum;
 
   constructor() { }
 
