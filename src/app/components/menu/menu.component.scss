@@ -19,3 +19,11 @@
     }
   }
 }
+
+.selected-program {
+  position: absolute;
+  left: 50px;
+  top: 16px;
+  display: flex;
+  gap: 10px;
+}
