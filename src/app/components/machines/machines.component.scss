@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+.swiper-slide-prev {
+  justify-content: flex-end;
+
+  ::ng-deep app-machine-item {
+    justify-content: flex-end;
+  }
+}

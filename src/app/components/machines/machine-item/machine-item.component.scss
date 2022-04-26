@@ -1,4 +1,4 @@
-@import '../../../styles/config/all';
+@import '../../styles/config/all';
 
 :host {
   display: flex;
@@ -57,8 +57,8 @@
 
   &__background {
     position: absolute;
-    width: 190px;
-    height: 190px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
