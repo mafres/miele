@@ -2,16 +2,16 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 
 import SwiperCore, {Swiper, SwiperOptions} from 'swiper';
 import {SwiperComponent} from 'swiper/angular';
-import {ProgramsEnum} from '../enums/programs.enum';
-import {machineProgramService} from "../service/machineProgram.service";
+import {ProgramsEnum} from '../../enums/programs.enum';
+import {selectedProgramService} from "../../service/selected-program.service";
 import {select, Store} from "@ngrx/store";
-import {setActiveProgram} from "../actions/machineProgram.actions";
+import {setSelectedProgram} from "../../actions/selected-program.actions";
 import {Observable} from "rxjs";
-import {machineProgramsInterface} from "../models/machinePrograms.interface";
+import {selectedProgramInterface} from "../../models/selected-program.interface";
 import {map} from "rxjs/operators";
-import {getActiveProgram, reducers} from "../reducers";
+import {getActiveProgram, reducers} from "../../reducers";
 
-import * as rootReducer from "../reducers"
+import * as rootReducer from "../../reducers"
 
 @Component({
   selector: 'app-machines',
@@ -38,7 +38,7 @@ export class MachinesComponent {
 
   constructor(
     private _store: Store,
-    private _machineService: machineProgramService
+    private _machineService: selectedProgramService
   ) {}
 
   onSlideChange() {
@@ -53,7 +53,7 @@ export class MachinesComponent {
     const programObject = Object.keys(this.programs);
     programObject.forEach((key, index) => {
       if (swiperIndex === index) {
-        this._store.dispatch(setActiveProgram({payload: {id: index, name: this.programs[index]}}));
+        this._store.dispatch(setSelectedProgram({payload: {id: index, name: this.programs[index]}}));
       }
     });
   }
