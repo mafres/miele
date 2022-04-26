@@ -1,17 +1,13 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Output, ViewChild} from '@angular/core';
+import { Store} from '@ngrx/store';
 
-import SwiperCore, {Swiper, SwiperOptions} from 'swiper';
-import {SwiperComponent} from 'swiper/angular';
-import {ProgramsEnum} from '../../enums/programs.enum';
-import {selectedProgramService} from "../../service/selected-program.service";
-import {select, Store} from "@ngrx/store";
-import {setSelectedProgram} from "../../actions/selected-program.actions";
-import {Observable} from "rxjs";
-import {selectedProgramInterface} from "../../models/selected-program.interface";
-import {map} from "rxjs/operators";
-import {getActiveProgram, reducers} from "../../reducers";
+import SwiperCore, { Swiper, SwiperOptions } from 'swiper';
+import { SwiperComponent } from 'swiper/angular';
 
-import * as rootReducer from "../../reducers"
+import * as rootReducer from '../../reducers';
+import { ProgramsEnum } from '../../enums/programs.enum';
+import { selectedProgramService } from '../../service/selected-program.service';
+import { setSelectedProgram } from '../../actions/selected-program.actions';
 
 @Component({
   selector: 'app-machines',
@@ -20,11 +16,12 @@ import * as rootReducer from "../../reducers"
 })
 export class MachinesComponent {
 
+  @Output()
+    toggleHelp: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
 
   swiperActiveIndex: number = 0;
-
-  //activeProgram$: Observable<any>;
 
   readonly programs = ProgramsEnum;
 
@@ -37,7 +34,7 @@ export class MachinesComponent {
   };
 
   constructor(
-    private _store: Store,
+    private _store: Store<rootReducer.State>,
     private _machineService: selectedProgramService
   ) {}
 

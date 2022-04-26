@@ -1,5 +1,16 @@
+@import '../../../styles/config/all';
+
 :host {
   display: block;
+}
+
+.machines-decorator {
+  background-color: $color-black;
+  border-radius: 8px;
+  display: block;
+  height: 15px;
+  width: 30px;
+  margin: 7vh auto 6vh;
 }
 
 swiper {
@@ -7,12 +18,6 @@ swiper {
     .swiper-slide {
       display: flex;
       justify-content: space-around;
-    }
-
-    .swiper-slide-prev {}
-
-    .swiper-slide-next {
-      justify-content: flex-start;
     }
   }
 }

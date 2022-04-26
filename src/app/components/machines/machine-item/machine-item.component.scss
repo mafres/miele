@@ -1,9 +1,11 @@
 @import '../../../../styles/config/all';
 
+$item-size: 245px;
+$item-size-small: 120px;
+
 :host {
   display: block;
-
-  height: 245px + 40px + 120px;
+  height: $item-size + 40px + $item-size-small;
 }
 
 .machine-item {
@@ -12,17 +14,20 @@
   border-radius: 50%;
   border: 9px solid;
   display: flex;
-  height: 245px;
+  height: $item-size;
   justify-content: space-around;
   position: relative;
-  width: 245px;
+  width: $item-size;
   transition: all 300ms ease-in-out;
-  transform: translate(0, 0) scale(1);
+  transform: translate(0px, 0px) scale(1);
+  overflow: hidden;
+
+  > * {
+    transition: all 300ms ease-in-out;
+  }
 
   &--inactive {
-    &:not([class*="--isNext"]) {
-      transform: translate(60px, 220px) scale(.49);
-    }
+    transform: translate(60px, 220px) scale(.49);
 
     &[class*="--isNext"] {
       transform: translate(-60px, 220px) scale(.49);
@@ -31,7 +36,6 @@
     > * {
       visibility: hidden;
       opacity: 0;
-      transition: all 300ms ease-in-out;
     }
   }
 
