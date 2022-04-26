@@ -13,7 +13,4 @@ export const reducers: ActionReducerMap<State> = {
   selectedProgram: selectedProgram.selectedProgramReducer
 };
 
-//export const getActiveProgramState = createFeatureSelector<State>('selectedMachine');
-export const getActiveProgram = (state: State) => state.selectedProgram;
-
 export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [];
