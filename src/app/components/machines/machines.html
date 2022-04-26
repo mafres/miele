@@ -3,7 +3,7 @@
 <swiper [config]="config"
         #swiper
         (slideChange)="onSlideChange()"
-        (sliderFirstMove)="toggleHelp.emit()">
+        (touchMove)="toggleHelp.emit()">
   <ng-template swiperSlide let-slide>
     <app-machine-item [active]="swiperActiveIndex === programs.automatic"
                       [program]="programs.automatic"
