@@ -1,3 +1,5 @@
+@import '../../../styles/config/all';
+
 :host {
   display: block;
 }
@@ -6,11 +8,16 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  padding: 15px;
 
   &__item {
     background: transparent;
     border: none;
     color: white;
     font-size: 24px;
+
+    &--inactive {
+      color: rgba($color-white, 60%);
+    }
   }
 }
