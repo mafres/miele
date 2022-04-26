@@ -7,7 +7,6 @@ import {
 import { Action } from '@ngrx/store';
 import {
   Observable,
-  of, tap
 } from 'rxjs';
 import {
   map,
