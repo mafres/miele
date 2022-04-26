@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
-import {ProgramsEnum} from "../enums/programs.enum";
+import {ProgramsEnum} from "../../../enums/programs.enum";
 
 @Component({
   selector: 'app-machine-item',
