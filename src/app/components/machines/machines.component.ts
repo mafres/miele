@@ -24,7 +24,7 @@ export class MachinesComponent {
 
   swiperActiveIndex: number = 0;
 
-  // activeProgram$: Observable<machineProgramsInterface>
+  //activeProgram$: Observable<any>;
 
   readonly programs = ProgramsEnum;
 

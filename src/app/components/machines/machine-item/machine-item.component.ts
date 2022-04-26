@@ -20,6 +20,12 @@ export class MachineItemComponent implements OnInit {
   @Input()
     active: boolean = false;
 
+  @Input()
+    isNext: boolean = false;
+
+  @Input()
+    isPrev: boolean = false;
+
   readonly programs = ProgramsEnum;
 
   constructor() { }

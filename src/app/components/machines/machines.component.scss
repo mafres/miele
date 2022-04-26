@@ -1,10 +1,18 @@
 :host {
   display: block;
 }
-.swiper-slide-prev {
-  justify-content: flex-end;
 
-  ::ng-deep app-machine-item {
-    justify-content: flex-end;
+swiper {
+  ::ng-deep {
+    .swiper-slide {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .swiper-slide-prev {}
+
+    .swiper-slide-next {
+      justify-content: flex-start;
+    }
   }
 }

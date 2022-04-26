@@ -1,8 +1,9 @@
-@import '../../styles/config/all';
+@import '../../../../styles/config/all';
 
 :host {
-  display: flex;
-  justify-content: space-around;
+  display: block;
+
+  height: 245px + 40px + 120px;
 }
 
 .machine-item {
@@ -17,20 +18,46 @@
   transition: all 300ms ease-in-out;
 
   &--inactive {
-    width: 40px;
-    height: 40px;
+    width: 120px;
+    height: 120px;
+
+    &:not([class*="--isNext"]) {
+      transform: translateY((245px + 40px)) translateX(60px);
+    }
+
+    &[class*="--isNext"] {
+      transform: translateY((245px + 40px)) translateX(0);
+    }
+
+    > * {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+    }
   }
 
   &--automatic {
     border-color: $color-indicator-blue;
+
+    &[class*="--inactive"] {
+      background-color: $color-indicator-blue;
+    }
   }
 
   &--special {
     border-color: $color-indicator-red;
+
+    &[class*="--inactive"] {
+      background-color: $color-indicator-red;
+    }
   }
 
   &--eco {
     border-color: $color-indicator-green;
+
+    &[class*="--inactive"] {
+      background-color: $color-indicator-green;
+    }
   }
 
   &__inner {
