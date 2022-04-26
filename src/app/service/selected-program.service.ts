@@ -17,6 +17,6 @@ export class selectedProgramService {
   setSelectedProgram(payload: selectedProgramInterface) {
     let url = 'https://62600fdb53a42eaa07ff8272.mockapi.io/machine/1';
 
-    return this._httpClient.put<selectedProgramInterface>(url, {activeProgram: [payload]});
+    return this._httpClient.put<selectedProgramInterface>(url, {activeProgram: payload});
   }
 }
