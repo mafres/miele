@@ -1,6 +1,6 @@
 <div class="app-container">
   <app-menu></app-menu>
   <app-tabs></app-tabs>
-  <app-machines></app-machines>
-  <app-help></app-help>
+  <app-machines (toggleHelp)="toggleHelp()"></app-machines>
+  <app-help *ngIf="helpVisible"></app-help>
 </div>
