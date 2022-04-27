@@ -6,11 +6,11 @@ import {
 import { ProgramsEnum } from "../../../enums/programs.enum";
 
 @Component({
-  selector: 'app-machine-item',
-  templateUrl: './machine-item.component.html',
-  styleUrls: ['./machine-item.component.scss']
+  selector: 'app-program-item',
+  templateUrl: './program-item.component.html',
+  styleUrls: ['./program-item.component.scss']
 })
-export class MachineItemComponent {
+export class ProgramItemComponent {
 
   @Input()
     icon: string | undefined;

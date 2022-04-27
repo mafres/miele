@@ -1,6 +1,6 @@
 <div class="app-container">
   <app-menu></app-menu>
   <app-tabs></app-tabs>
-  <app-machines (toggleHelp)="toggleHelp()"></app-machines>
+  <app-programs (showHelp)="showHelp($event)"></app-programs>
   <app-help *ngIf="helpVisible"></app-help>
 </div>

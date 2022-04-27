@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MachineItemComponent } from './machine-item.component';
+import { ProgramItemComponent } from './program-item.component';
 
-describe('MachineItemComponent', () => {
-  let component: MachineItemComponent;
-  let fixture: ComponentFixture<MachineItemComponent>;
+describe('ProgramItemComponent', () => {
+  let component: ProgramItemComponent;
+  let fixture: ComponentFixture<ProgramItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MachineItemComponent ]
+      declarations: [ ProgramItemComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MachineItemComponent);
+    fixture = TestBed.createComponent(ProgramItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,6 +4,7 @@ import {
   Store
 } from '@ngrx/store';
 import * as rootReducer from '../../reducers';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-menu',
@@ -12,9 +13,16 @@ import * as rootReducer from '../../reducers';
 })
 export class MenuComponent {
 
+  test: Observable<{ id: number, name: string; }>;
+
   constructor(
     private _store: Store<rootReducer.State>,
   ) {
+
+    this.test = this._store.pipe(
+      select(state => state.selectedProgram)
+    );
+
     this._store.pipe(
       select(state => state.selectedProgram)
     ).subscribe(value => {

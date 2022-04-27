@@ -9,8 +9,8 @@ import {StoreModule} from "@ngrx/store";
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import {MachinesComponent} from "./components/machines/machines.component";
-import {MachineItemComponent} from "./components/machines/machine-item/machine-item.component";
+import {ProgramsComponent} from "./components/programs/programs.component";
+import {ProgramItemComponent} from "./components/programs/program-item/program-item.component";
 import {SwiperModule} from "swiper/angular";
 import {selectedProgramService} from "./service/selected-program.service";
 import {HttpClientModule} from "@angular/common/http";
@@ -23,8 +23,8 @@ import {SelectedMachineEffects} from "./effects/selected-machine.effects";
     MenuComponent,
     TabsComponent,
     HelpComponent,
-    MachinesComponent,
-    MachineItemComponent,
+    ProgramsComponent,
+    ProgramItemComponent,
   ],
   imports: [
     BrowserModule,

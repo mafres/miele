@@ -16,10 +16,10 @@ import { setSelectedProgram } from '../../actions/selected-program.actions';
 
 @Component({
   selector: 'app-programs',
-  templateUrl: './machines.html',
-  styleUrls: ['./machines.component.scss']
+  templateUrl: './programs.html',
+  styleUrls: ['./programs.component.scss']
 })
-export class MachinesComponent {
+export class ProgramsComponent {
 
   @Output()
     showHelp: EventEmitter<boolean> = new EventEmitter<boolean>();

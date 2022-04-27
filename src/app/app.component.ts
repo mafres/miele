@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +12,12 @@ export class AppComponent {
   title = 'Miele';
   helpVisible: boolean = true;
 
-  toggleHelp() {
-    this.helpVisible = false;
+  constructor(
+    private _cdr: ChangeDetectorRef
+  ) {}
+
+  showHelp(toggle: boolean) {
+    this.helpVisible = toggle;
+    this._cdr.detectChanges();
   }
 }
