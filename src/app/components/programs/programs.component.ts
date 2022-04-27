@@ -1,7 +1,12 @@
-import {Component, EventEmitter, Output, ViewChild} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { Store} from '@ngrx/store';
 
-import SwiperCore, { Swiper, SwiperOptions } from 'swiper';
+import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
 import * as rootReducer from '../../reducers';
@@ -10,16 +15,16 @@ import { selectedProgramService } from '../../service/selected-program.service';
 import { setSelectedProgram } from '../../actions/selected-program.actions';
 
 @Component({
-  selector: 'app-machines',
+  selector: 'app-programs',
   templateUrl: './machines.html',
   styleUrls: ['./machines.component.scss']
 })
 export class MachinesComponent {
 
   @Output()
-    toggleHelp: EventEmitter<boolean> = new EventEmitter<boolean>();
+    showHelp: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+  @ViewChild('swiper', { static: true }) swiper?: SwiperComponent;
 
   swiperActiveIndex: number = 0;
 
