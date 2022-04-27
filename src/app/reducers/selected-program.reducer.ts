@@ -2,7 +2,7 @@ import {
   createReducer,
   on
 } from '@ngrx/store';
-import { setSelectedProgram } from '../actions/selected-program.actions';
+import {setSelectedProgram, setSelectedProgramSucceeded} from '../actions/selected-program.actions';
 
 export interface State {
   id: number,
@@ -20,8 +20,15 @@ export const selectedProgramReducer = createReducer(
     setSelectedProgram,
     (state, { payload }) => (
     {
+      ...state,
       id: payload.id,
       name: payload.name
     }
-  ))
+  )),
+  on(
+    setSelectedProgramSucceeded,
+    (state) => {
+      return state
+    }
+  )
 );
