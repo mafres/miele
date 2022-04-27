@@ -4,6 +4,7 @@ import {
   Store
 } from '@ngrx/store';
 import * as rootReducer from '../../reducers';
+import { selectedProgramInterface } from '../../models/selected-program.interface';
 
 @Component({
   selector: 'app-menu',
@@ -16,9 +17,8 @@ export class MenuComponent {
   ) {
     this._store.pipe(
       select(state => state.selectedProgram)
-    ).subscribe(value => {
-      console.log(value);
+    ).subscribe((selectedProgram: selectedProgramInterface) => {
+      console.log(selectedProgram);
     });
   }
-
 }
